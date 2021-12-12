@@ -9,8 +9,9 @@ body {
   margin: 0;
   overflow: hidden;
   height: 100vh;
+  background: black;
   font-family: 'Pacifico', Georgia, Times, 'Times New Roman', serif;
-  background-image: url(https://img.freepik.com/free-vector/seamless-pattern_1159-5086.jpg?size=626&ext=jpg);
+  background-image: url(background.jpg);
   background-size: var(--backgroundSize);
   background-position: var(--bposx) var(--bposy);
   color: var(--whiteish);
