@@ -4,6 +4,7 @@
   --bposx: 0;
   --bposy: 0;
 }
+
 body {
   box-sizing: border-box;
   margin: 0;
@@ -13,7 +14,7 @@ body {
   font-family: 'Pacifico', Georgia, Times, 'Times New Roman', serif;
   background-image: url(background.jpg);
   background-size: var(--backgroundSize);
-  background-position: var(--bposx) var(--bposy);
+  /* background-position: var(--bposx) var(--bposy); */
   color: var(--whiteish);
   display: grid;
   place-items: center;
@@ -22,9 +23,33 @@ body {
 video {
   position: fixed;
   width: 50vw;
-  top: 50%;
-  left: 50%;
+  top: calc(50% - var(--bposy));
+  left: calc(50% - var(--bposx));
   transform: translate(-50%, -50%);
   border-radius: 5%;
-  box-shadow: 0px 5px 20px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5);
+}
+
+.box {
+  position: fixed;
+  border-radius: 5%;
+  opacity: 0.8;
+}
+
+#box1 {
+  width: 20vw;
+  height: 20vw;
+  background: brown;
+  top: calc(40% + (var(--bposy) * 4));
+  left: calc(40% - (var(--bposx) * 4));
+  box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.5);
+}
+
+#box2 {
+  width: 30vw;
+  height: 30vw;
+  background: cornflowerblue;
+  top: calc(20% + (var(--bposy) * 2));
+  left: calc(20% - (var(--bposx) * 2));
+  box-shadow: 0px 5px 120px 10px rgba(0, 0, 0, 0.8);
 }
