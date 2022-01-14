@@ -11,8 +11,6 @@ const NUM_KEYPOINTS = 468;
 const NUM_IRIS_KEYPOINTS = 5;
 const SMOOTHING = 0;
 
-const HALF_DIAGONAL = 0.2;
-
 const parameter2 = (location.search.split('blaze=')[1] || '').split('&')[0]
 const BLAZE = (parameter2.length > 0);
 
